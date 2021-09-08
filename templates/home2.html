@@ -1,0 +1,15 @@
+<!DOCTYPE html>
+<html lang="en">
+<div class="jumbotron jumbotron-fluid">
+  <div class="container">
+    <h1 class="display-4"> Henry's File Storage </h1>
+<ul>
+{% for thing in options %}
+  <li>{{ thing }}</li>
+  <form action="/download/{{ thing }}" method="get">
+      <button name="forwardBtn" type="submit">{{thing}}</button>
+  </form>
+{% endfor %}
+</ul>
+
+</html>
